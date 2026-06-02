@@ -1,0 +1,9 @@
+# Obsidian 사용자별 UI 상태 (커밋 불필요)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# OS·기타
+.DS_Store
+Thumbs.db
+.trash/
