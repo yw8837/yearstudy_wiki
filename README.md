@@ -43,12 +43,22 @@ yearstudy_wiki/
 노트 연결(`[[링크]]`), 그래프 뷰, 검색이 모두 작동합니다.
 
 1. **Obsidian 설치** → **https://obsidian.md/download** (Windows / macOS / Linux 무료)
-2. 이 저장소를 내 컴퓨터로 내려받기
+2. 이 저장소를 내 컴퓨터로 내려받기 — 아래 **두 방법 중 하나**
+
+   **🟢 방법 A. ZIP 다운로드 — git 몰라도 OK (초보자 추천)**
+   1. 이 저장소 페이지 오른쪽 위 초록색 **`<> Code`** 버튼 클릭
+   2. 메뉴 맨 아래 **`Download ZIP`** 클릭 → zip 파일이 다운로드됨
+   3. 받은 zip을 **압축 해제** → `yearstudy_wiki` 폴더가 생김
+
+   > ⚠️ ZIP은 "받은 그 시점의 사본"이라, 나중에 내용이 바뀌면 **다시 받아야** 합니다(자동 갱신 안 됨).
+
+   **🔵 방법 B. git clone — 터미널을 쓸 줄 알면**
    ```bash
    git clone https://github.com/yw8837/yearstudy_wiki.git
    ```
-   (또는 GitHub `Code → Download ZIP` 으로 받아 압축 해제)
-3. Obsidian 실행 → **`Open folder as vault`** (폴더를 보관소로 열기) → 내려받은 `yearstudy_wiki` 폴더 선택
+   > 이후 `git pull` 한 번이면 최신 내용으로 갱신돼서 편합니다.
+
+3. Obsidian 실행 → **`Open folder as vault`** (폴더를 보관소로 열기) → 내려받은(압축 푼) `yearstudy_wiki` 폴더 선택
 4. 끝! 좌측 사이드바에서 폴더를 탐색하거나, `인덱스.md`부터 시작하세요.
 
 > 💡 **검색**: `Ctrl/Cmd + Shift + F` 전체 검색, `Ctrl/Cmd + O` 빠른 파일 열기.
