@@ -22,6 +22,35 @@ tags: [Git, GitHub, 버전관리, 협업, 도구]
 
 ## 어떻게 작동하나
 
+### 🚀 처음 시작하기 (첫 실습 흐름: repo 생성 → clone → config → push)
+
+GitHub를 처음 쓸 때 한 번 거치는 전체 흐름이다.
+
+```bash
+# 1) GitHub에서 New Repository 생성 (웹)
+#    프로필 > Repositories > New
+#    - .gitignore: Python 선택  (파이썬 프로젝트면 .venv 등 자동 무시)
+#    - License: 교육·공유 목적이면 MIT 권장 (인용 조건 전제)
+#    - 공개 범위: Private(공유 원치 않음) / Public(패키지 등 공유 목적)
+
+# 2) clone — 원격 저장소를 내 PC로 복제
+#    Code > HTTPS 탭에서 주소 복사
+#    (작업 위치: Windows는 C드라이브, Mac은 Desktop 등 → 터미널로 이동 후)
+git clone https://github.com/yourname/your-repo.git
+
+# 3) config — 커밋에 남길 본인 신원 등록 (최초 1회, --global)
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+
+# 4) add → commit → push
+git add .
+git commit -m "my first commit"
+git push
+```
+
+> ✅ **정상 동작 확인**: GitHub 레포를 새로고침했을 때 커밋 내용이 보이고, 터미널에 빨간 에러·경고 없이 `main` 브랜치로 push 완료가 뜨면 성공.
+> ⚠️ **흔한 실수**: `git config`에 **강사(또는 남)의 이메일·이름을 그대로 따라 치는 것**. 반드시 본인 계정 정보로 설정하라.
+
 ### 기본 흐름 (가장 많이 쓰는 4단계)
 
 ```bash
@@ -85,6 +114,8 @@ git push origin main
 
 **`.gitignore`**: git이 추적하지 않을 파일 목록(예: `.venv`, 비밀키). 올리면 안 되는 건 여기 적는다.
 
+**환경 오류가 안 풀릴 때**: 개인 PC 환경 오류는 원인 파악이 어렵다. 검색·질문으로 해결을 시도하고, **최후의 수단은 레포를 새로 만들어 처음부터 다시** 진행하는 것이다(첫 실습 단계에선 이게 더 빠를 때가 많다).
+
 ---
 
 ## 더 알면 좋은 것
@@ -97,6 +128,8 @@ git push origin main
 
 📌 **커밋 메시지 관례**: `feat:`(기능) `fix:`(수정) `docs:`(문서)처럼 접두어를 붙이면 이력이 깔끔.
 
+📌 **개발 루틴**: 강사 왈 — 개발자는 GitHub에 일상적으로 접속하는 수준으로 자주 쓴다. git/환경 세팅은 매일 반복 학습으로 손에 익히는 게 목표.
+
 ---
 
 ## 관련 개념
@@ -104,3 +137,4 @@ git push origin main
 - [[마크다운]] — README·이슈·PR이 전부 마크다운
 - [[리눅스]] — git은 터미널에서 명령어로 사용
 - [[VSCode]] — 에디터에서 git을 GUI로 편하게
+- [[uv]] — git으로 받은 프로젝트의 가상환경 세팅·실행

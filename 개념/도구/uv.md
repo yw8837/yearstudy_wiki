@@ -49,6 +49,17 @@ uv run jupyter lab            # 실습 시작
 
 **Windows 보안 차단(`os error 4551`)**: `uv run`이 막히면 Windows 보안 "앱 및 브라우저 컨트롤"을 잠시 해제. → [[개발환경-설정]]
 
+**`uv trampoline failed to canonicalize script path` 에러**: `.venv`가 깨졌을 때 발생. git-bash에서 아래를 순서대로 실행해 가상환경을 재생성한다.
+```bash
+rm -rf .venv
+uv cache clean
+uv sync
+uv run jupyter lab
+```
+그래도 안 되면 일부 실습은 **Google Colab**으로 전환하는 것도 방법.
+
+**Windows PATH 충돌**: PATH에 다른 파이썬(예: 3.14)이 잡혀 충돌할 수 있다. 해당 항목을 PATH에서 제거 후 VS Code를 재실행한다. OneDrive 동기화·과도한 보안 설정도 개발 중 일시 해제 권장.
+
 ---
 
 ## 더 알면 좋은 것
@@ -64,3 +75,4 @@ uv run jupyter lab            # 실습 시작
 - [[개발환경-설정]] — uv 설치~실행 전체 가이드(정리본)
 - [[파이썬]] — uv로 돌리는 언어
 - [[리눅스]] — 터미널에서 명령어로 사용
+- [[Git]] — git으로 clone한 프로젝트를 uv로 세팅·실행
